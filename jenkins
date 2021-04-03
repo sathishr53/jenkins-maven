@@ -17,5 +17,11 @@ peline {
                 sh "mvn package"
             }
         }
+        stage('Archieving') { 
+            steps {
+           archiveArtifacts "**/target/*.jar"
+            }
+        }
+        
     }
 }
